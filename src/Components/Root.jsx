@@ -3,6 +3,7 @@ import Navber from "./Navber";
 import Footer from "./Footer";
 
 
+
 const Root = () => {
     return (
         <div className="p-2">

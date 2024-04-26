@@ -1,6 +1,7 @@
 import { Link,useLocation,useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaGoogle,FaGithub, FaEyeSlash } from "react-icons/fa";
+import swal from 'sweetalert';
 
 import { FaEye } from "react-icons/fa6";
 
@@ -21,6 +22,8 @@ const Login = () => {
 
     console.log('location here',location)
 
+    
+
     const handelLogin = e => {
         e.preventDefault();
         console.log(e.currentTarget)
@@ -31,11 +34,25 @@ const Login = () => {
         signIn(email, password)
             .then(result=>{
                 console.log(result.user)
+                swal({
+                    title: "Welcome",
+                    text: "You Loged in SuCCessfullY",
+                    icon: "success",
+                    dangerMode: true,
+                  })
 
                 // navigate to login
                 navigate(location?.state ? location.state : "/");
             })
-            .catch()
+            .catch(error =>{
+                swal({
+                    title: "opps",
+                    text: "Your Email or password worng ",
+                    icon: "warning",
+                    dangerMode: true,
+                  })
+                  
+            })
     }
     if(loading){
        return <span className="loading loading-spinner text-primary"></span>;
@@ -47,17 +64,46 @@ const Login = () => {
     signInWithPopup(auth,provider)
     .then((result)=>{
         console.log(result);
+        swal({
+            title: "Welcome",
+            text: "You Loged in SuCCessfullY",
+            icon: "success",
+            dangerMode: true,
+          })
+
         navigate(location?.state ? location.state : "/");
     })
-    .catch()
+    .catch(error=>{
+        swal({
+            title: "opps",
+            text: "Your Email or password worng ",
+            icon: "warning",
+            dangerMode: true,
+          })
+    })
   }
 
     const handelGitHubLogin =()=>{
         signInWithPopup(auth,gitProvider)
         .then(result=>{
+            swal({
+                title: "Welcome",
+                text: "You Loged in SuCCessfullY",
+                icon: "success",
+                dangerMode: true,
+              })
+
             navigate(location?.state ? location.state : "/");
+
         })
-        .catch()
+        .catch(error =>{
+            swal({
+                title: "opps",
+                text: "Your Email or password worng ",
+                icon: "warning",
+                dangerMode: true,
+              })
+        })
     }
     return (
         <div>

@@ -34,7 +34,7 @@ const Navbar = () => {
         <div data-aos="fade-down"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000">
-            <div className="navbar bg-orange-300 rounded-md animate__animated animate__swing" >
+            <div className="navbar bg-purple-400  rounded-md animate__animated animate__swing" >
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost font-bold text-2xl uppercase "> Dream Home</a>
+                    <a className="btn btn-ghost font-bold md:text-3xl uppercase "> Tourists Spot</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu text-sm font-bold menu-horizontal px-1">

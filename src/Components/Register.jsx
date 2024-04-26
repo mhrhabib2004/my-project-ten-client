@@ -49,7 +49,13 @@ const Register = () => {
             updateUserProfile(name,photo)
             .then(()=>{
                 console.log(result.user)
-                alert('Your Registration successfull');
+                swal({
+                    title: "Welcome",
+                    text: "You are registration completed",
+                    icon: "success",
+                    dangerMode: true,
+                  })
+                  
                 return;
 
             })
@@ -57,7 +63,12 @@ const Register = () => {
             
         })
         .catch(error=>{
-            alert('You already Registred')
+            swal({
+                title: "opps",
+                text: "You already registered please login",
+                icon: "warning",
+                dangerMode: true,
+              })
         })
     }
     // crate user
