@@ -1,11 +1,14 @@
 import { Link,useLocation,useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaGoogle,FaGithub, FaEyeSlash } from "react-icons/fa";
-import { signInWithPopup} from "firebase/auth";
+
 import { FaEye } from "react-icons/fa6";
 
-import auth from "../firebase.Config";
+
 import { AuthContext } from "./Provaider/AuthProvaider";
+
+import auth from "../firebase.Config";
+import { signInWithPopup } from "firebase/auth";
 
 
 const Login = () => {
@@ -40,13 +43,14 @@ const Login = () => {
 
 
    
-    const handelGooglelogin=()=>{
-        signInWithPopup(auth,provider)
-        .then(result=>{
-            navigate(location?.state ? location.state : "/");
-        })
-        .catch()
-    }
+  const handelGooglelogin= ()=>{
+    signInWithPopup(auth,provider)
+    .then((result)=>{
+        console.log(result);
+        navigate(location?.state ? location.state : "/");
+    })
+    .catch()
+  }
 
     const handelGitHubLogin =()=>{
         signInWithPopup(auth,gitProvider)
