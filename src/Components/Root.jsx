@@ -4,11 +4,15 @@ import Footer from "./Footer";
 
 
 
+
 const Root = () => {
     return (
         <div className="p-2">
             <Navber></Navber>
+           
             <Outlet></Outlet>
+
+
             <Footer></Footer>
         </div>
     );

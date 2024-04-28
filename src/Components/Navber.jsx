@@ -10,25 +10,31 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const handelSingout = () => {
         logOut()
-            .then()
+            .then(()=>{
+                swal({
+                    title: "Welcome",
+                    text: "Your Log out successs",
+                    icon: "success",
+                    dangerMode: true,
+                  })
+            })
             .catch()
 
     }
     const navLinks = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
-        {/* {
+        <li><NavLink to={"/AllTouristsSpot"}>All Tourists Spot</NavLink></li>
+        {
       user && (
         <>
-          <li><NavLink to={"/UpdateProfile"}>Update Profile</NavLink></li>
-          <li><NavLink to={"/userprofile"}>user profile</NavLink></li>
+          <li><NavLink to={"/AddTouristsSpot"}>Add Tourists Spot</NavLink></li>
+        <li><NavLink to={"/MyList"}>My List</NavLink></li>
         </>
       )
-    } */}
-
-        <li><NavLink to={"/AllTouristsSpot"}>All Tourists Spot</NavLink></li>
-        <li><NavLink to={"/AddTouristsSpot"}>Add Tourists Spot</NavLink></li>
-        <li><NavLink to={"/MyList"}>My List</NavLink></li>
-        <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>
+    }
+    <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>
+    
+ 
     </>
     return (
         <div data-aos="fade-down"
@@ -56,7 +62,7 @@ const Navbar = () => {
                     {
                         user?.email ? <div className="flex gap-2 items-center"><div className="w-10 rounded-full lg:tooltip lg:tooltip-left" data-tip={user?.displayName} >
                             <img className="rounded-full " alt="profile" src={user?.photoURL} />
-                        </div> <button onClick={handelSingout} className="btn text-xl font-bold  btn-warning">Sign out</button></div> : <Link to={"/Login"}> <button className="btn text-xl font-bold btn-outline">Login</button></Link>
+                        </div> <button onClick={handelSingout} className="btn text-xl font-bold  btn-warning">Sign out</button></div> : <div className="flex gap-1"><Link to={"/Login"}> <button className="btn md:text-xl font-bold btn-outline">Login</button></Link> <Link to={"/Register"}><button className="btn md:text-xl font-bold btn-outline">Register</button></Link></div>
                     }
 
                 </div>

@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8iSj5ViEwpadQ0jKu81a5dGSO-UOeQWBDf39dkjLQ_luQq8ZTHg7DeX5_QYzwHJB524g&usqp=CAU)' } }  className="mt-7 bg-no-repeat bg-cover bg-center rounded-xl ">
+    <div style={{ backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfSNG0hsb6txV-Di13nDgGM7YpwtZKjpQBjv6MZDLzqw&s)' } }  className="mt-7 bg-no-repeat bg-cover bg-center rounded-xl ">
       <footer   data-aos="fade-up" className="px-4 divide-y   text-[#fff]">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
@@ -17,7 +17,7 @@ const Footer = () => {
           </div>
           <div className="grid animate__animated animate__fadeInDown grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-yellow-700 font-medium text-lg">Product</h3>
+              <h3 className="tracking-wide uppercase text-yellow-50 font-medium text-lg">Product</h3>
               <ul className="space-y-1">
                 <li>
                   <a rel="noopener noreferrer" href="#">Features</a>
@@ -34,7 +34,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="tracking-wide uppercase text-yellow-700 font-medium text-lg">Company</h3>
+              <h3 className="tracking-wide uppercase text-yellow-50 font-medium text-lg">Company</h3>
               <ul className="space-y-1">
                 <li>
                   <a rel="noopener noreferrer" href="#">Privacy</a>
@@ -45,7 +45,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase text-yellow-700 font-medium text-lg">Developers</h3>
+              <h3 className="uppercase text-yellow-50 font-medium text-lg">Developers</h3>
               <ul className="space-y-1">
                 <li>
                   <a rel="noopener noreferrer" href="#">Public API</a>
@@ -59,7 +59,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="uppercase text-yellow-700 font-medium text-lg">Social media</div>
+              <div className="uppercase text-yellow-50 font-medium text-lg">Social media</div>
               <div className="flex justify-center space-x-3">
                 <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
                   <button className="btn btn-outline  border-none bg-slate-700 w-12 btn-secondary"><FaFacebook /></button>
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 text-sm text-center animate__animated animate__bounce text-yellow-700 font-medium ">© 2000 Company Co. All rights reserved.</div>
+        <div className="py-6 text-sm text-center animate__animated animate__bounce text-yellow-50 font-medium ">© 2000 Company Co. All rights reserved.</div>
       </footer >
     </div >
 

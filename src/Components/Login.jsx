@@ -2,12 +2,8 @@ import { Link,useLocation,useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaGoogle,FaGithub, FaEyeSlash } from "react-icons/fa";
 import swal from 'sweetalert';
-
 import { FaEye } from "react-icons/fa6";
-
-
 import { AuthContext } from "./Provaider/AuthProvaider";
-
 import auth from "../firebase.Config";
 import { signInWithPopup } from "firebase/auth";
 
@@ -58,8 +54,6 @@ const Login = () => {
        return <span className="loading loading-spinner text-primary"></span>;
     }
 
-
-   
   const handelGooglelogin= ()=>{
     signInWithPopup(auth,provider)
     .then((result)=>{
@@ -109,7 +103,7 @@ const Login = () => {
         <div>
      
             
-            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://t4.ftcdn.net/jpg/05/71/83/47/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg)' }}>
+            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2020/09/27/ratargul_swamp_forest_in_syalhet._photo_collected.jpg)' }}>
                 
                 <div className="hero-content flex-col ">
                     
@@ -138,9 +132,7 @@ const Login = () => {
                                    required />
                                    <span className="absolute top-3 right-2" onClick={()=>setshowpassword(!showPassword)}>{showPassword?<FaEyeSlash/>:<FaEye />}</span>
                                 </div>
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
