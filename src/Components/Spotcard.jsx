@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Spotcard = ({addsopt}) => {
     const {photo,spot,average,seasonality,time,totalVisitorsPerYear}=addsopt;
@@ -11,6 +12,8 @@ const Spotcard = ({addsopt}) => {
                     <p>totaVisitorsPerYear : {totalVisitorsPerYear}</p>
                     <p> travel_time : {time}</p>
                     <p>seasonality : {seasonality}</p>
+                    
+                    <Link to={`/allspotview/${addsopt._id}`}><button className="btn w-full btn-outline btn-warning">View Details</button></Link>
                     
                 </div>
             </div>

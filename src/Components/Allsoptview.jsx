@@ -1,15 +1,11 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
-const VIewditels = () => {
-    const addspot = useLoaderData();
-    console.log('spot data here', addspot)
-
-    const { id } = useParams(addspot);
-    // const dataInt = parseInt(id);
-    // console.log(dataInt)
-    console.log(id);
-    const Spot = addspot.find((Spots) => Spots._id === id);
-    console.log('spot here', Spot)
+const Allsoptview = () => {
+    const alldataview = useLoaderData();
+    // console.log('all data here',alldataview)
+    const { id } = useParams(alldataview);
+    // console.log('id here', id);
+    const Spot = alldataview.find((Spots) => Spots._id === id);
     const { photo, spot, country, location, description, average, seasonality, time, totalVisitorsPerYear, email, name } = Spot;
     return (
         <div style={{ backgroundImage: 'url(https://static.vecteezy.com/system/resources/thumbnails/002/282/910/small/elegant-white-background-free-vector.jpg)' }} className="hero min-h-screen bg-no-repeat bg-cover bg-center bg-base-200">
@@ -34,4 +30,4 @@ const VIewditels = () => {
     );
 };
 
-export default VIewditels;
+export default Allsoptview;

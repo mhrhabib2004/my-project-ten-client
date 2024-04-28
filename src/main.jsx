@@ -15,6 +15,8 @@ import AddTouristsSpot from './Components/AddTouristsSpot.jsx';
 import Spotlist from './Components/Spotlist.jsx';
 import VIewditels from './Components/VIewditels.jsx';
 import PrivetRout from './Components/PrivetRout.jsx';
+import Allsoptview from './Components/Allsoptview.jsx';
+import Mydatalist from './Components/Mydatalist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,16 @@ const router = createBrowserRouter([
       {
         path:"/viewdata/:id",
         element: <PrivetRout><VIewditels></VIewditels></PrivetRout>,
+        loader: ()=>fetch("http://localhost:5000/addspots")
+      },
+      {
+        path:"/allspotview/:id",
+        element: <PrivetRout><Allsoptview></Allsoptview></PrivetRout>,
+        loader: ()=>fetch("http://localhost:5000/addspots")
+      },
+      {
+        path:"/MyList",
+        element: <PrivetRout><Mydatalist></Mydatalist></PrivetRout>,
         loader: ()=>fetch("http://localhost:5000/addspots")
       }
     
