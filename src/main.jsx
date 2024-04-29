@@ -17,6 +17,7 @@ import VIewditels from './Components/VIewditels.jsx';
 import PrivetRout from './Components/PrivetRout.jsx';
 import Allsoptview from './Components/Allsoptview.jsx';
 import Mydatalist from './Components/Mydatalist.jsx';
+import UpdateSpot from './Components/UpdateSpot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
         path:"/MyList",
         element: <PrivetRout><Mydatalist></Mydatalist></PrivetRout>,
         loader: ()=>fetch("http://localhost:5000/addspots")
+      },
+      {
+        path:"/UpdateSpot/:id",
+        element:<PrivetRout><UpdateSpot></UpdateSpot></PrivetRout>,
+        loader:({params})=> fetch(`http://localhost:5000/addspots/${params.id}`)
       }
     
     ]

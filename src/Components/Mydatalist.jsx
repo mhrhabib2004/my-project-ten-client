@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "./Provaider/AuthProvaider";
 import swal from "sweetalert";
 
@@ -7,7 +7,8 @@ import swal from "sweetalert";
 const Mydatalist = () => {
     const { user } = useContext(AuthContext);
     // console.log('contex data ', user.email)
-    const mydatalist = useLoaderData();
+    const lodedmydatalist = useLoaderData();
+    const [mydatalist,setmydatalist]=useState(lodedmydatalist);
     const userEmail = user.email;
     const EmailData = mydatalist.filter((userData) => userData.email === userEmail);
     console.log('Filtered Data', EmailData);
@@ -36,6 +37,8 @@ const Mydatalist = () => {
               }
 
            })
+           const remening = mydatalist.filter(data=>data._id !==_id);
+           setmydatalist(remening);
             }
           });
 
@@ -43,13 +46,14 @@ const Mydatalist = () => {
     return (
         <div className="grid mt-7 gap-4 md:grid-cols-2">
             {EmailData.map((data, index) => (
-                <div key={index} className="card card-side bg-base-100 shadow-xl">
-                    <figure><img className="w-52 ml-3 h-52  rounded-xl" src={data.photo} alt="Spot" /></figure>
+                <div key={index} className="card card-side flex md:flex-row flex-col bg-base-100 shadow-xl">
+                    <figure><img className="md:w-52 ml-3 lg:p-2 md:h-52 h-56 w-64  rounded-xl" src={data.photo} alt="Spot" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Spot name : {data.spot}</h2>
                         <p>Location : {data.location}</p>
+                        <p>Seasonality: {data.seasonality}</p>
                         <div className="card-actions ">
-                            <button className="btn btn-outline btn-accent">Update</button>
+                            <Link to={`/UpdateSpot/${data._id}`}><button className="btn btn-outline btn-accent">Update</button></Link>
                             <button onClick={()=> handledelete(data._id)} className="btn btn-outline btn-secondary">Delete</button>
                         </div>
                     </div>
