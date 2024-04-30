@@ -4,7 +4,7 @@ const Slider = () => {
     return (
         <div data-aos="zoom-out" data-aos-duration="1500" className=" mt-7 rounded-xl relative carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/1LKvNfG/MG-5977.jpg" className="w-full h-auto" />
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT6TsWWNpemjIOsuUoKE9lO7sx-Wg_Xhnf84COyheJGEKGtttL2TEHIzABROP52hQL4mF0fJdcVkHFUfC3tMCO5wAItHHrS0inIt-0C1A" className="w-full h-auto" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
@@ -51,7 +51,7 @@ const Slider = () => {
                     </span>
                 </h1>
                 {/* animation Text */}
-                <p className="md:mb-5 md:text-xl md:font-bold text-indigo-950">
+                <p className="md:mb-5 md:text-sm md:font-bold text-white">
                     Exploring new places fuels the souls thirst for adventure, unveiling hidden wonders and forging unforgettable memories. Across landscapes and cultures, we discover the beauty of diversity, weaving our own unique narrative in the fabric of the world. With each journey.
                 </p>
                 

@@ -1,9 +1,10 @@
 
 
 const Country = () => {
+   
     return (
         <div>
-            <h1>hey this is countrys</h1>
+            <h1 className="text-2xl text-center">country data here</h1>
         </div>
     );
 };
