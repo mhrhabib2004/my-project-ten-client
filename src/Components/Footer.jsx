@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="self-center text-2xl font-semibold">
                 <button  data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className="btn text-4xl btn-outline h-auto border-none bg-slate-600 p-2 btn-secondary"> Tourists Spot</button></span>
+     data-aos-duration="2000" className="btn text-4xl btn-outline h-auto border-none bg-slate-600 p-2 btn-secondary">TRIP TREKKER</button></span>
             </a>
           </div>
           <div className="grid animate__animated animate__fadeInDown grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
