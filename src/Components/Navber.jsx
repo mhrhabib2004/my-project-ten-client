@@ -37,6 +37,7 @@ const Navbar = () => {
             )
         }
         <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>
+        <li><NavLink to={"/country"}>Country</NavLink></li>
         <label className="cursor-pointer grid place-items-center">
             <input checked={isdark}
                 onChange={() => setIsdark(!isdark)} type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />

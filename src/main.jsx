@@ -18,6 +18,7 @@ import PrivetRout from './Components/PrivetRout.jsx';
 import Allsoptview from './Components/Allsoptview.jsx';
 import Mydatalist from './Components/Mydatalist.jsx';
 import UpdateSpot from './Components/UpdateSpot.jsx';
+import Country from './Components/Country.jsx';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
         path:"/UpdateSpot/:id",
         element:<PrivetRout><UpdateSpot></UpdateSpot></PrivetRout>,
         loader:({params})=> fetch(`https://n-gamma-sand.vercel.app/addspots/${params.id}`)
+      },
+      {
+        path:"/country",
+        element:<Country></Country>,
       }
     
     ]

@@ -1,50 +1,73 @@
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
     return (
         <div>
-            <h1 className="text-3xl text-center font-extrabold mt-7">Sand & surf</h1>
+            <h1 className="text-4xl text-center font-extrabold mt-7">Countries</h1>
+            <h1 className="text-3xl text-green-500 text-center font-extrabold mt-7"> Southeast Asia
+</h1>
             {/* card section */}
-            <div className="grid mt-7 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid mt-7 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <Link>
                 <div className="card w-auto bg-base-100 shadow-xl">
                     <figure><img className="h-60 w-full" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/b9/78/cc/20190309-125548-largejpg.jpg?w=600&h=600&s=1" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Sonadia Island</h2>
-                        <p>This is a great place, especially in October-April season. You can see at least thousands of birds, crabs, peaceful yet untouched wild animals, beautiful curved sandy beach a nice river and the best forest experience</p>
-                        <div className="card-actions justify-end">
-                            
-                        </div>
+                        <h2 className="card-title">Bangladesh</h2>
+                        <p>Bangladesh,[a] officially the People's Republic of Bangladesh,[b] is a country in South Asia. It is the eighth-most populous country in the world and is among the most densely populated countries with a population of nearly 170 million in an area of 148,460 square kilometres (57,320 sq mi)</p>
+                        
                     </div>
                 </div>
-                <div className="card w-auto bg-base-100 shadow-xl">
-                    <figure><img className="h-60 w-full"  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/84/c9/2a/restaurant-area.jpg?w=600&h=600&s=1" alt="Shoes" /></figure>
+                </Link>
+               <Link>
+               <div className="card w-auto bg-base-100 shadow-xl">
+                    <figure><img className="h-60 w-full" src="https://lh5.googleusercontent.com/p/AF1QipNFnjBjDVmOM_t020qRsryyVdXGcWMAGFRg1sCV=w810-h468-n-k-no" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Mermaid Beach Resort</h2>
-                        <p>Mermaid Beach invite you to join us in Cox's Bazar and experience intelligent luxury, slow food, and slow life close proximity to our beautiful beach.</p>
-                        <div className="card-actions justify-end">
-                            
-                        </div>
+                        <h2 className="card-title">Thailand</h2>
+                        <p>Thailand,[b] officially the Kingdom of Thailand and historically known as Siam (the official name until 1939),[c] is a country in Southeast Asia on the Indochinese Peninsula. With a population of almost 70 million.</p>
+                        
                     </div>
                 </div>
+               </Link>
+                <Link>
                 <div className="card w-auto bg-base-100 shadow-xl">
-                    <figure><img className="h-60 w-full"  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/d2/61/27/laboni-beach-seen-on.jpg?w=600&h=-1&s=1" alt="Shoes" /></figure>
+                    <figure><img className="h-60 w-full" src="https://lh6.googleusercontent.com/proxy/1jBJ6DkVJDO_fsthZ6MZP77iRtdlz-Is0vroTnIT3KlPou0oFRVbiyjXfbsqlW0DJv6sNMJHny4xMWfBL-QBx9PXLfjwYSytsKqWSeFAfKhY8B_s_SBYDLCqFi8FNjKeqW46oJDyKRMliIH2TcIJ3vTcS7tKug=w810-h468-n-k-no" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Laboni Beach</h2>
-                        <p>We recommend staying at one of the most popular hotels in Cox's Bazar, which include:</p>
-                        <div className="card-actions justify-end">
-                            
-                        </div>
+                        <h2 className="card-title">Indonesia</h2>
+                        <p>Indonesia, officially the Republic of Indonesia, is a country in Southeast Asia and Oceania between the Indian and Pacific oceans. It consists of over 17,000 islands, including Sumatra, Java, Sulawesi, and parts of Borneo and New Guinea</p>
+                        
                     </div>
                 </div>
+                </Link>
+                <Link>
                 <div className="card w-auto bg-base-100 shadow-xl">
-                    <figure><img className="h-60 w-full"  src="https://media-cdn.tripadvisor.com/media/photo-m/1280/25/26/0d/56/beach-salsa.jpg" alt="Shoes" /></figure>
+                    <figure><img className="h-60 w-full" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTAJ_tZ2zZDrPUXoIJhFelFSWxvtCbmxjFwpzOZdm5uSnH_g8cMzqFjW-kDexkLGa1xsp7bP20XypYA747FHuVpZF5ufKFhFslfwAeUfA" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Beach Salsa</h2>
-                        <p>There aren't enough food, service, value or atmosphere ratings for Beach Salsa yet</p>
-                        <div className="card-actions justify-end">
-                            
-                        </div>
+                        <h2 className="card-title">Malaysia</h2>
+                        <p>Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. It's known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences</p>
+                        
                     </div>
                 </div>
+                </Link>
+                <Link>
+                <div className="card w-auto bg-base-100 shadow-xl">
+                    <figure><img className="h-60 w-full" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSpYyZI-alZgeqFbv5DaXOqrbPIV4XGnsUD6f9zguoreMkmVXl4MB4PlenfNwR0F3NmuOOKKPfeLU7xzbeesojxI8BaDEDE9DMZKmew6L4" alt="Shoes" /></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">Vietnam</h2>
+                        <p>Vietnam is a Southeast Asian country known for its beaches, rivers, Buddhist pagodas and bustling cities. Hanoi, the capital, pays homage to the nation’s iconic Communist-era leader, Ho Chi Minh, via a huge marble mausoleum.</p>
+                        
+                    </div>
+                </div>
+                </Link>
+                <Link>
+                <div className="card w-auto bg-base-100 shadow-xl">
+                    <figure><img className="h-60 w-full" src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcShZzcpZMTnfXUDhYRPPTFw2_-c9n6iToyw50VjdbwpsVUsbuvPfAModAraQL6mxqRUI_gMg9Brn22-0U9Kf7p1zGalaxxfJqdP_0NtIw" alt="Shoes" /></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">Cambodia</h2>
+                        <p>Cambodia is a Southeast Asian nation whose landscape spans low-lying plains, the Mekong Delta, mountains and Gulf of Thailand coastline. Phnom Penh, its capital, is home to the art deco Central Market,</p>
+                        
+                    </div>
+                </div>
+                </Link>
 
             </div>
         </div>
