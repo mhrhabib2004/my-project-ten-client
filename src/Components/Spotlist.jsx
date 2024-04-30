@@ -23,7 +23,7 @@ const Spotlist = () => {
 
     return (
         <div className="mt-7 ">
-            <h1 className="text-center font-extrabold text-3xl">Tourists Spots</h1>
+            <h1 className="text-center font-extrabold text-3xl">All <span className="text-green-700">Tourists</span> Spots</h1>
            <div className="flex mt-7 justify-center">
            <select className="select  select-error w-full max-w-xs text-xl" onChange={handleSortChange}>
                 <option value="">Sort By</option>
