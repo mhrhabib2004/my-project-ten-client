@@ -22,7 +22,7 @@ const AddTouristsSpot = () => {
         const newaddspots ={photo,spot,country,location,description,average,seasonality,time,totalVisitorsPerYear,email,name};
         console.log(newaddspots);
 
-        fetch('http://localhost:5000/addspots',{
+        fetch('https://n-gamma-sand.vercel.app/addspots',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

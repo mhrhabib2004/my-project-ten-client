@@ -4,7 +4,7 @@ import Spotcardhome from "./Spotcardhome";
 const TouristSpot = () => {
     const [addsopt, setaddspot] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/addspots')
+        fetch('https://n-gamma-sand.vercel.app/addspots')
             .then(res => res.json())
             .then(data => setaddspot(data))
     }, [])

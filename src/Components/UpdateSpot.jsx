@@ -21,7 +21,7 @@ const UpdateSpot = () => {
         // console.log(newaddspots);
        
 
-        fetch(`http://localhost:5000/addspots/${updat._id}`,{
+        fetch(`https://n-gamma-sand.vercel.app/addspots/${updat._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

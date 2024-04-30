@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Spotcardhome = ({ addspot }) => {
     // console.log('spot here', addspot)
-    const{photo,spot,country,location,description,average,seasonality,time,totalVisitorsPerYear,email,name}=addspot;
+    const{photo,spot,average,seasonality,time,totalVisitorsPerYear,}=addspot;
 
     console.log('data from spot ',addspot)
     return (

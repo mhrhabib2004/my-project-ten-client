@@ -45,27 +45,27 @@ const router = createBrowserRouter([
       {
         path:"/AllTouristsSpot",
         element:<Spotlist></Spotlist>,
-        loader:()=> fetch('http://localhost:5000/addspots')
+        loader:()=> fetch('https://n-gamma-sand.vercel.app/addspots')
       },
       {
         path:"/viewdata/:id",
         element: <PrivetRout><VIewditels></VIewditels></PrivetRout>,
-        loader: ()=>fetch("http://localhost:5000/addspots")
+        loader: ()=>fetch("https://n-gamma-sand.vercel.app/addspots")
       },
       {
         path:"/allspotview/:id",
         element: <PrivetRout><Allsoptview></Allsoptview></PrivetRout>,
-        loader: ()=>fetch("http://localhost:5000/addspots")
+        loader: ()=>fetch("https://n-gamma-sand.vercel.app/addspots")
       },
       {
         path:"/MyList",
         element: <PrivetRout><Mydatalist></Mydatalist></PrivetRout>,
-        loader: ()=>fetch("http://localhost:5000/addspots")
+        loader: ()=>fetch("https://n-gamma-sand.vercel.app/addspots")
       },
       {
         path:"/UpdateSpot/:id",
         element:<PrivetRout><UpdateSpot></UpdateSpot></PrivetRout>,
-        loader:({params})=> fetch(`http://localhost:5000/addspots/${params.id}`)
+        loader:({params})=> fetch(`https://n-gamma-sand.vercel.app/addspots/${params.id}`)
       }
     
     ]

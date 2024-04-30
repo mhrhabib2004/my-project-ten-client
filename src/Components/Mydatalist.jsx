@@ -8,39 +8,39 @@ const Mydatalist = () => {
     const { user } = useContext(AuthContext);
     // console.log('contex data ', user.email)
     const lodedmydatalist = useLoaderData();
-    const [mydatalist,setmydatalist]=useState(lodedmydatalist);
+    const [mydatalist, setmydatalist] = useState(lodedmydatalist);
     const userEmail = user.email;
     const EmailData = mydatalist.filter((userData) => userData.email === userEmail);
     console.log('Filtered Data', EmailData);
 
-  
-    const handledelete=_id=>{
+
+    const handledelete = _id => {
         console.log(_id)
         swal({
             title: "Are you sure?",
             text: "Are you sure that you want to leave this page?",
             icon: "warning",
             dangerMode: true,
-          })
-         
-          .then(willDelete => {
-            if (willDelete) {
-            //   swal("Deleted!", "Your imaginary file has been deleted!", "success");
-           fetch(`http://localhost:5000/addspots/${_id}`,{
-            method:"DELETE"
-           })
-           .then(res=>res.json())
-           .then(data=>{
-            console.log(data)
-            if (data.deleted>0) {
-                swal("Deleted!", "Your imaginary file has been deleted!", "success");
-              }
+        })
 
-           })
-           const remening = mydatalist.filter(data=>data._id !==_id);
-           setmydatalist(remening);
-            }
-          });
+            .then(willDelete => {
+                if (willDelete) {
+                    //   swal("Deleted!", "Your imaginary file has been deleted!", "success");
+                    fetch(`https://n-gamma-sand.vercel.app/addspots/${_id}`, {
+                        method: "DELETE"
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                            if (data.deleted > 0) {
+                                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+                            }
+
+                        })
+                    const remening = mydatalist.filter(data => data._id !== _id);
+                    setmydatalist(remening);
+                }
+            });
 
     }
     return (
@@ -52,9 +52,13 @@ const Mydatalist = () => {
                         <h2 className="card-title">Spot name : {data.spot}</h2>
                         <p>Location : {data.location}</p>
                         <p>Seasonality: {data.seasonality}</p>
+                        <p>average_cost : {data.average}</p>
+                        <p>totaVisitorsPerYear : {data.totalVisitorsPerYear}</p>
+                        <p> travel_time : {data.time}</p>
+                        
                         <div className="card-actions ">
                             <Link to={`/UpdateSpot/${data._id}`}><button className="btn btn-outline btn-accent">Update</button></Link>
-                            <button onClick={()=> handledelete(data._id)} className="btn btn-outline btn-secondary">Delete</button>
+                            <button onClick={() => handledelete(data._id)} className="btn btn-outline btn-secondary">Delete</button>
                         </div>
                     </div>
                 </div>
@@ -64,3 +68,10 @@ const Mydatalist = () => {
 };
 
 export default Mydatalist;
+
+
+{/* <h2 className="card-title">spot_name :{spot}</h2>
+                    <p>average_cost : {average}</p>
+                    <p>totaVisitorsPerYear : {totalVisitorsPerYear}</p>
+                    <p> travel_time : {time}</p>
+                    <p>seasonality : {seasonality}</p> */}

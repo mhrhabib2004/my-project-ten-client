@@ -3,8 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provaider/AuthProvaider";
 import { useContext } from "react";
 
-
-
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
@@ -34,7 +32,6 @@ const Navbar = () => {
     }
     <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>
     
- 
     </>
     return (
         <div data-aos="fade-down"
