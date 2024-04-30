@@ -33,7 +33,7 @@ const AddTouristsSpot = () => {
         .then(data=>{
             console.log(data);
             if (data.insertedId){
-                swal.fire({
+                swal({
                     title: "WoW",
                     text: "You added spot successfully",
                     icon: "success",

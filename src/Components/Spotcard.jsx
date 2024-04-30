@@ -1,6 +1,10 @@
+
 import { Link } from "react-router-dom";
 
 const Spotcard = ({addsopt}) => {
+
+   
+
     const {photo,spot,average,seasonality,time,totalVisitorsPerYear}=addsopt;
     return (
         <div className="">

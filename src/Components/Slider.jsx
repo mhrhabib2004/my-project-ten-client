@@ -1,7 +1,8 @@
-
+import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter'
 const Slider = () => {
     return (
-        <div data-aos="zoom-out" data-aos-duration="1500" className=" mt-7 rounded-xl carousel w-full">
+        <div data-aos="zoom-out" data-aos-duration="1500" className=" mt-7 rounded-xl relative carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://i.ibb.co/1LKvNfG/MG-5977.jpg" className="w-full h-auto" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -29,6 +30,32 @@ const Slider = () => {
                     <a href="#slide3" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
+
+            </div>
+
+            <div className="lg:w-1/2 absolute lg:left-[10%] md:left-[7%] left-[5%] lg:top-1/3 md:top-[20%] top-[15%] ">
+                <h1 className="md:text-5xl text-xl font-bold text-white ">Hello there</h1>
+                {/* animation Text */}
+                <h1 className="md:mb-5 md:text-5xl text-xl font-bold text-white md:py-4 m-auto" >
+                    Life is simple
+                    <span className="text-red-600 font-bold" >
+                        <Typewriter
+                            words={['Tour', 'Sleep', 'Journey', 'Repeat!']}
+                            loop={Infinity}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
+                </h1>
+                {/* animation Text */}
+                <p className="md:mb-5 md:text-xl md:font-bold text-indigo-950">
+                    Exploring new places fuels the souls thirst for adventure, unveiling hidden wonders and forging unforgettable memories. Across landscapes and cultures, we discover the beauty of diversity, weaving our own unique narrative in the fabric of the world. With each journey.
+                </p>
+                
+
             </div>
         </div>
     );

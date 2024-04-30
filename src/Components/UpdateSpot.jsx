@@ -32,7 +32,7 @@ const UpdateSpot = () => {
         .then(data=>{
             console.log(data);
             if (data.modifiedCount>0){
-                swal.fire({
+                swal({
                     title: "WoW",
                     text: "You Updated spot successfully",
                     icon: "success",
