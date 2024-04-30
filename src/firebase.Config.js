@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAeRW6WQPVOAqaEIIU-V0t4Dx07c-k6BI4",
-  authDomain: "assainment-ten-tourism.firebaseapp.com",
-  projectId: "assainment-ten-tourism",
-  storageBucket: "assainment-ten-tourism.appspot.com",
-  messagingSenderId: "238974508172",
-  appId: "1:238974508172:web:411b07ab29ddf30f522fa9"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
