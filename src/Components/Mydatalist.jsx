@@ -11,7 +11,7 @@ const Mydatalist = () => {
     const [mydatalist, setmydatalist] = useState(lodedmydatalist);
     const userEmail = user.email;
     const EmailData = mydatalist.filter((userData) => userData.email === userEmail);
-    console.log('Filtered Data', EmailData);
+    // console.log('Filtered Data', EmailData);
 
 
     const handledelete = _id => {

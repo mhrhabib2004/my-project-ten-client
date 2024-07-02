@@ -19,6 +19,7 @@ const AddTouristsSpot = () => {
         const totalVisitorsPerYear =form.totalVisitorsPerYear.value;
         const email=form.email.value;
         const name =form.name.value;
+        form.reset();
         const newaddspots ={photo,spot,country,location,description,average,seasonality,time,totalVisitorsPerYear,email,name};
         console.log(newaddspots);
 

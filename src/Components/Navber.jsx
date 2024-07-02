@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import { AuthContext } from "./Provaider/AuthProvaider";
 import { useContext, useEffect, useState } from "react";
+import swal from "sweetalert";
 
 const Navbar = () => {
     const [isdark, setIsdark] = useState(
@@ -36,8 +37,8 @@ const Navbar = () => {
                 </>
             )
         }
-        <li><NavLink to={"/errorPage"}>Contact us</NavLink></li>
-        <li><NavLink to={"/country"}>Country</NavLink></li>
+        {/* <li><NavLink to={"/AboutUs"}>About Us</NavLink></li> */}
+        {/* <li><NavLink to={"/country"}>Country</NavLink></li> */}
         <label className="cursor-pointer grid place-items-center">
             <input checked={isdark}
                 onChange={() => setIsdark(!isdark)} type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />

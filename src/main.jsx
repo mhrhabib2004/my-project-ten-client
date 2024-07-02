@@ -19,6 +19,7 @@ import Allsoptview from './Components/Allsoptview.jsx';
 import Mydatalist from './Components/Mydatalist.jsx';
 import UpdateSpot from './Components/UpdateSpot.jsx';
 import Country from './Components/Country.jsx';
+import AboutUs from './Components/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -68,10 +69,15 @@ const router = createBrowserRouter([
         element:<PrivetRout><UpdateSpot></UpdateSpot></PrivetRout>,
         loader:({params})=> fetch(`https://n-gamma-sand.vercel.app/addspots/${params.id}`)
       },
-      {
-        path:"/country",
-        element:<Country></Country>,
-      }
+      // {
+      //   path:"/country:id",
+      //   element:<Country></Country>,
+      //   loader:()=>fetch(`https://n-gamma-sand.vercel.app/countries/${id}`)
+      // },
+      // {
+      //   path:"/AboutUs",
+      //   element:<AboutUs></AboutUs>
+      // }
     
     ]
   },

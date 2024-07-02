@@ -16,6 +16,7 @@ const UpdateSpot = () => {
         const seasonality =form.seasonality.value;
         const time =form.time.value;
         const totalVisitorsPerYear =form.totalVisitorsPerYear.value;
+        form.reset();
         const UpdaetedData ={photo,spot,country,location,description,average,seasonality,time,totalVisitorsPerYear};
 
         // console.log(newaddspots);

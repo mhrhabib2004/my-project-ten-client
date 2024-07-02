@@ -5,7 +5,7 @@ const Spotcardhome = ({ addspot }) => {
     // console.log('spot here', addspot)
     const{photo,spot,average,seasonality,time,totalVisitorsPerYear,}=addspot;
 
-    console.log('data from spot ',addspot)
+    // console.log('data from spot ',addspot)
     return (
         <div className="">
             <div className="card flex flex-col md:flex-row  md:h-72 card-side bg-base-100 shadow-xl">
