@@ -1,5 +1,5 @@
 
-import AboutUs from "./AboutUs";
+// import AboutUs from "./AboutUs";
 import Pakages from "./Pakages";
 import Slider from "./Slider";
 import TouristSpot from "./TouristSpot";
